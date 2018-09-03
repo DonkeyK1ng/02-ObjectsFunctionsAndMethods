@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Yuanning Zuo.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# Done: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -27,10 +27,24 @@ def main():
     You write the tests per the _TODO_s below.
     """
 
+    ans = plus1(2, 3)
+    print(ans)
+
+def plus1(a,b):
+
+    plus = a+b
+    return plus
+
+main()
+
+
+
+
+
 
 ###############################################################################
 #
-# TODO: 3a.  Define a function immediately blow this _TODO_.
+# Done: 3a.  Define a function immediately blow this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -38,15 +52,29 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# Done: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
+import math
+
+def main():
+
+    ans = hypo(2, 3)
+    print(ans)
+    turtle1('blue', 15)
+def hypo(a, b):
+
+    h = math.sqrt(a ** 2)+math.sqrt(b ** 2)
+
+    return h
+
+
 
 
 ###############################################################################
 #
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# Done: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -62,15 +90,32 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function and print the returned value,
+# Done: 4b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
 
+def turtle1(col, thick):
+
+    window = rg.TurtleWindow()
+
+    anim = rg.SimpleTurtle('turtle')
+    anim.pen.color = 'green'
+    anim.pen.thickness = thick
+    anim.forward(100)
+
+    second = rg.SimpleTurtle('turtle')
+    second.pen.color = col
+    second.pen.thickness = 5
+    second.backward(100)
+
+    window.close_on_mouse_click()
+
+
 
 ###############################################################################
 #
-# TODO: 5.
+# Done: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
